@@ -1,0 +1,9 @@
+---
+- name: Sample playbook for user creation
+  hosts: all
+  become: true
+  tasks:
+    - name: Create user john_doe
+      ansible.builtin.user:
+        name: john_doe
+        state: present
