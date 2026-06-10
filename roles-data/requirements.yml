@@ -1,0 +1,5 @@
+---
+- src: https://github.com/bennojoy/nginx
+  name: webserver
+
+- src: https://github.com/shaneholloman/ansible-role-apache

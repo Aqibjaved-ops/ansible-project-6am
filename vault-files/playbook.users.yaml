@@ -1,0 +1,11 @@
+---
+- name:  Add new user
+  hosts: serverb
+  vars_files:
+    - secret.yaml
+  tasks:
+    - name: Add new user
+      ansible.builtin.user:
+        name: "{{ username }}"
+        password: "{{ pwhash | password_hash('sha512') }}"
+        state: present

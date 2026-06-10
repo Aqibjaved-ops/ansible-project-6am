@@ -1,0 +1,28 @@
+---
+- name: Do partitions
+  hosts: serverb
+  tasks:
+    - name: Create partitions 1500M on /dev/sdb
+      community.general.parted:
+        device: /dev/sdb
+        number: 1
+        part_end: 1500MiB
+        state: present
+
+    - name: Create mount point
+      ansible.builtin.file:
+        path: /data
+        state: directory
+
+    - name: Create filesystem
+      community.general.filesystem:
+        device: /dev/sdb1
+        fstype: ext4
+
+    - name: Mount /dev/sdb on /data
+      ansible.builtin.mount:
+        path: /data
+        src: /dev/sdb1
+        fstype: ext4
+        state: mounted
+        opts: defaults

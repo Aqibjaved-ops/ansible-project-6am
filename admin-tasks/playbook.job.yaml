@@ -1,0 +1,10 @@
+---
+- name: New job
+  hosts: servera
+  tasks:
+    - name: Remove user jack
+      ansible.posix.at:
+        command: userdel -r jack
+        count: 02
+        units: minutes
+        unique: true

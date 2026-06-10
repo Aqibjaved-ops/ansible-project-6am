@@ -1,0 +1,8 @@
+- name: Manage timesync
+  hosts: serverb
+  vars:
+    timesync_ntp_servers:
+      - hostname: classroom.example.com
+        iburst: true
+  roles:
+    - rhel-system-roles.timesync

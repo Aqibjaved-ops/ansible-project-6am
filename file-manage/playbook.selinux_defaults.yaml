@@ -1,0 +1,8 @@
+---
+- name: Using the file module
+  hosts: servera
+  tasks:
+    - name: SElinux file
+      ansible.builtin.file:
+        path: /home/student/users.txt
+        setype: _default

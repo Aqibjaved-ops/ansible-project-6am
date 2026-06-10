@@ -1,0 +1,21 @@
+---
+- name: Configure web server
+  hosts: serverb
+  tasks:
+    - name: Include the environment.yml
+      ansible.builtin.include_tasks: tasks/environment.yml
+      vars:
+        package: httpd
+        service: httpd
+
+    - name: Import the firewall tasks
+      ansible.builtin.import_tasks: tasks/firewall.yml
+      vars:
+        firewall_pkg: firewalld
+        firewall_svc: firewalld
+        rule: http
+
+    - name: Import the placeholder task
+      ansible.builtin.import_tasks: tasks/placeholder.yml
+      vars:
+        file: /var/www/html/index.html

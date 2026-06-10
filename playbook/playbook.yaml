@@ -1,9 +1,8 @@
 ---
-- name: Sample playbook for user creation
-  hosts: all
-  become: true
+- name: Add new user Debjit
+  hosts: servera
   tasks:
-    - name: Create user john_doe
+    - name: Add new user
       ansible.builtin.user:
-        name: john_doe
+        name: Debjit
         state: present
