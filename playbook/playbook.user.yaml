@@ -1,8 +1,8 @@
 ---
-- name: Add new use sriharsha
+- name: Add new use sagar
   hosts: servera
   tasks:
     - name: Add new user for system
       ansible.builtin.user:
-        name: sriharsha
+        name: sagar
         state: present
