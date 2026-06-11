@@ -1,0 +1,8 @@
+---
+- name: Add new user kishore
+  hosts: servera
+  tasks:
+    - name: Add new user for system
+      ansible.builtin.user:
+        name: kishore
+        state: present

@@ -1,0 +1,8 @@
+---
+- name: Use the file module
+  hosts: servera
+  tasks:
+    - name: Remove a file from managed host
+      ansible.builtin.file:
+        path: /home/student/users.txt
+        state: absent

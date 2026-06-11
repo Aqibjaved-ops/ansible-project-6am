@@ -1,0 +1,11 @@
+---
+- name: Configure host
+  hosts: servera
+  tasks:
+    - name: Configurehost
+      ansible.builtin.template:
+        src: host.j2
+        dest: /etc/myhosts
+        owner: root
+        group: root
+        mode: 0644

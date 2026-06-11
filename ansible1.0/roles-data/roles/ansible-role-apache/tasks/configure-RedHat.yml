@@ -1,0 +1,54 @@
+---
+- name: Configure Apache.
+  ansible.builtin.lineinfile:
+    dest: "{{ apache_server_root }}/conf/{{ apache_daemon }}.conf"
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    state: present
+    mode: '0644'
+  with_items: "{{ apache_ports_configuration_items }}"
+  notify: Restart apache
+
+- name: Check whether certificates defined in vhosts exist.
+  ansible.builtin.stat:
+    path: "{{ item.certificate_file }}"
+  register: apache_ssl_certificates
+  with_items: "{{ apache_vhosts_ssl }}"
+
+- name: Enable Apache mods.
+  ansible.builtin.copy:
+    dest: "{{ apache_server_root }}/conf.modules.d/99-ansible-{{ item }}.conf"
+    content: |
+      LoadModule {{ item }}_module modules/mod_{{ item }}.so
+    mode: '0644'
+  with_items: "{{ apache_mods_enabled }}"
+  notify: Restart apache
+
+- name: Disable Apache mods
+  ansible.builtin.file:
+    path: "{{ apache_server_root }}/conf.modules.d/99-ansible-{{ item }}.conf"
+    state: absent
+  with_items: "{{ apache_mods_disabled }}"
+  notify: Restart apache
+
+- name: Add apache vhosts configuration.
+  ansible.builtin.template:
+    src: "{{ apache_vhosts_template }}"
+    dest: "{{ apache_conf_path }}/{{ apache_vhosts_filename }}"
+    owner: root
+    group: root
+    mode: '0644'
+  notify: Restart apache
+  when: apache_create_vhosts | bool
+
+- name: Ensure localhost certificate exists for RHEL 8 and later
+  when: ansible_distribution_major_version | int >= 8
+  block:
+    - name: Check if localhost cert exists (RHEL 8 and later).
+      ansible.builtin.stat:
+        path: /etc/pki/tls/certs/localhost.crt
+      register: localhost_cert
+
+    - name: Ensure httpd certs are installed (RHEL 8 and later).
+      ansible.builtin.command: /usr/libexec/httpd-ssl-gencerts  # noqa no-changed-when
+      when: not localhost_cert.stat.exists

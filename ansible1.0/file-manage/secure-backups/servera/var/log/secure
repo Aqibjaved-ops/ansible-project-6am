@@ -1,0 +1,117 @@
+Jun  7 19:17:03 servera sshd[1083]: Server listening on 0.0.0.0 port 22.
+Jun  7 19:17:03 servera sshd[1083]: Server listening on :: port 22.
+Jun  7 19:17:04 servera (systemd)[1164]: pam_unix(systemd-user:session): session opened for user gdm(uid=42) by gdm(uid=0)
+Jun  7 19:17:05 servera gdm-launch-environment][1138]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=42) by (uid=0)
+Jun  7 19:30:07 servera gdm-password][2590]: gkr-pam: unable to locate daemon control file
+Jun  7 19:30:07 servera gdm-password][2590]: gkr-pam: stashed password to try later in open session
+Jun  7 19:30:07 servera (systemd)[2601]: pam_unix(systemd-user:session): session opened for user root(uid=0) by root(uid=0)
+Jun  7 19:30:08 servera gdm-password][2590]: pam_unix(gdm-password:session): session opened for user root(uid=0) by root(uid=0)
+Jun  7 19:30:08 servera gdm-password][2590]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Jun  7 19:30:28 servera gdm-launch-environment][1138]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Jun  7 19:34:42 servera sshd-session[3390]: Accepted publickey for student from 192.168.61.155 port 46146 ssh2: ED25519 SHA256:uvhhLGvTXP3CQV7QmnqeRcjmTrGVHt3/6VrK9d6ujro
+Jun  7 19:34:42 servera (systemd)[3395]: pam_unix(systemd-user:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  7 19:34:43 servera sshd-session[3390]: pam_unix(sshd:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  7 19:34:44 servera sudo[3587]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-hbkcmxqxugwbronlfgteflxvhhugxtre ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841083.5404785-4803-66282917218106/AnsiballZ_setup.py'
+Jun  7 19:34:44 servera sudo[3587]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:34:46 servera sudo[3587]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:34:47 servera sudo[3776]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-piqumgrooiigdrubonjmmtcymopcvceb ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841087.0359952-5301-85779739742066/AnsiballZ_dnf.py'
+Jun  7 19:34:47 servera sudo[3776]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:34:57 servera sudo[3776]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:35:00 servera sudo[3942]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-wwdeifbekuwmkpftjopndwwccqjgbowu ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841098.4014597-5301-39715593029264/AnsiballZ_dnf.py'
+Jun  7 19:35:00 servera sudo[3942]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:35:08 servera sudo[3942]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:35:10 servera sudo[4104]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-uffinnlrjdaijmscyftepftptmmsqxtx ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841109.2523484-5301-75275929839388/AnsiballZ_dnf.py'
+Jun  7 19:35:10 servera sudo[4104]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:35:18 servera sudo[4104]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:36:18 servera sshd-session[3412]: Received disconnect from 192.168.61.155 port 46146:11: disconnected by user
+Jun  7 19:36:18 servera sshd-session[3412]: Disconnected from user student 192.168.61.155 port 46146
+Jun  7 19:36:18 servera sshd-session[3390]: pam_unix(sshd:session): session closed for user student
+Jun  7 19:36:39 servera sshd-session[4177]: Accepted publickey for student from 192.168.61.155 port 44572 ssh2: ED25519 SHA256:uvhhLGvTXP3CQV7QmnqeRcjmTrGVHt3/6VrK9d6ujro
+Jun  7 19:36:39 servera (systemd)[4183]: pam_unix(systemd-user:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  7 19:36:40 servera sshd-session[4177]: pam_unix(sshd:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  7 19:36:41 servera sudo[4375]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-kbkrnesjnjkcdtnafdubhlynfiqgzpzx ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841200.185016-7940-222819923977451/AnsiballZ_setup.py'
+Jun  7 19:36:41 servera sudo[4375]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:36:42 servera sudo[4375]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:36:42 servera sudo[4564]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-zqntendqgxwdqtteeqbleljpxjpmogxy ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841202.3486176-7963-211324673757702/AnsiballZ_dnf.py'
+Jun  7 19:36:42 servera sudo[4564]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:36:47 servera sudo[4564]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:36:48 servera sudo[4877]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-qcfaoflmydflvfqezbedacunlrttpvgo ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841207.7723274-8205-254882241275575/AnsiballZ_systemd.py'
+Jun  7 19:36:48 servera sudo[4877]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:36:49 servera sudo[4877]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:36:49 servera sudo[5032]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-lmwqokgfzjziiprokpzsngiqhlrbjwbj ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841209.3630633-8431-203844878858530/AnsiballZ_systemd.py'
+Jun  7 19:36:49 servera sudo[5032]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:36:51 servera sudo[5032]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:36:53 servera sudo[5510]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-mkytkqaqvkonxzszifosmmlzieaxjgty ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841212.1690958-8445-220308763826825/AnsiballZ_stat.py'
+Jun  7 19:36:53 servera sudo[5510]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:36:53 servera sudo[5510]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:36:56 servera sudo[5637]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-zyhjrnwmgkopybejghqjsbcfthmupfhb ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841212.1690958-8445-220308763826825/AnsiballZ_copy.py'
+Jun  7 19:36:56 servera sudo[5637]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:36:56 servera sudo[5637]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:36:57 servera sudo[5790]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-rjgwyhfhjespsgadjkwmmtoxiugaucbp ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780841216.6835418-8690-195682767186238/AnsiballZ_firewalld.py'
+Jun  7 19:36:57 servera sudo[5790]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  7 19:36:58 servera sudo[5790]: pam_unix(sudo:session): session closed for user root
+Jun  7 19:37:58 servera sshd-session[4200]: Received disconnect from 192.168.61.155 port 44572:11: disconnected by user
+Jun  7 19:37:58 servera sshd-session[4200]: Disconnected from user student 192.168.61.155 port 44572
+Jun  7 19:37:58 servera sshd-session[4177]: pam_unix(sshd:session): session closed for user student
+Jun  8 05:56:02 servera sshd[1086]: Server listening on 0.0.0.0 port 22.
+Jun  8 05:56:02 servera sshd[1086]: Server listening on :: port 22.
+Jun  8 05:56:03 servera (systemd)[1143]: pam_unix(systemd-user:session): session opened for user gdm(uid=42) by gdm(uid=0)
+Jun  8 05:56:04 servera gdm-launch-environment][1123]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=42) by (uid=0)
+Jun  8 06:00:57 servera gdm-password][2444]: gkr-pam: unable to locate daemon control file
+Jun  8 06:00:57 servera gdm-password][2444]: gkr-pam: stashed password to try later in open session
+Jun  8 06:00:57 servera (systemd)[2455]: pam_unix(systemd-user:session): session opened for user root(uid=0) by root(uid=0)
+Jun  8 06:00:58 servera gdm-password][2444]: pam_unix(gdm-password:session): session opened for user root(uid=0) by root(uid=0)
+Jun  8 06:00:58 servera gdm-password][2444]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Jun  8 06:01:11 servera gdm-launch-environment][1123]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Jun  8 06:21:25 servera sshd-session[3332]: Accepted publickey for student from 192.168.61.155 port 37444 ssh2: ED25519 SHA256:uvhhLGvTXP3CQV7QmnqeRcjmTrGVHt3/6VrK9d6ujro
+Jun  8 06:21:25 servera (systemd)[3338]: pam_unix(systemd-user:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  8 06:21:26 servera sshd-session[3332]: pam_unix(sshd:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  8 06:21:27 servera sudo[3529]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-ixetbuiuuygxvufvxtsvbbmheafljwuw ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780879886.5761492-3377-231889480131946/AnsiballZ_setup.py'
+Jun  8 06:21:27 servera sudo[3529]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:21:29 servera sudo[3529]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:21:31 servera sudo[3718]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-waqwzfifzrhxfthcawfaknugvdhmxxbm ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780879890.2108486-3636-35224122037844/AnsiballZ_dnf.py'
+Jun  8 06:21:31 servera sudo[3718]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:21:38 servera sudo[3718]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:21:39 servera sudo[3872]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-jegcsvgcnhwakjkflssyohttfpllwzft ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780879898.4852214-3636-81677591461476/AnsiballZ_dnf.py'
+Jun  8 06:21:39 servera sudo[3872]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:21:52 servera sudo[3872]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:21:52 servera sudo[4032]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-bqnhiwunligqaecjvhthmixfuqfgfxsq ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780879912.2503252-3636-263929552787855/AnsiballZ_dnf.py'
+Jun  8 06:21:52 servera sudo[4032]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:22:05 servera sudo[4032]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:23:05 servera sshd-session[3354]: Received disconnect from 192.168.61.155 port 37444:11: disconnected by user
+Jun  8 06:23:05 servera sshd-session[3354]: Disconnected from user student 192.168.61.155 port 37444
+Jun  8 06:23:05 servera sshd-session[3332]: pam_unix(sshd:session): session closed for user student
+Jun  8 06:23:46 servera sshd-session[4098]: Accepted publickey for student from 192.168.61.155 port 37338 ssh2: ED25519 SHA256:uvhhLGvTXP3CQV7QmnqeRcjmTrGVHt3/6VrK9d6ujro
+Jun  8 06:23:46 servera (systemd)[4104]: pam_unix(systemd-user:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  8 06:23:46 servera sshd-session[4098]: pam_unix(sshd:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  8 06:23:47 servera sudo[4295]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-mpzgrqjlhxnlbdouqblgncnvqzgkxiis ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780880026.7908843-7604-50403848901599/AnsiballZ_setup.py'
+Jun  8 06:23:47 servera sudo[4295]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:23:48 servera sudo[4295]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:23:49 servera sudo[4485]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-hilbxtwdydfhfswjepcuffirrmqrcgse ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780880028.8118856-7623-118349648550691/AnsiballZ_dnf.py'
+Jun  8 06:23:49 servera sudo[4485]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:23:56 servera sudo[4485]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:23:56 servera sudo[4639]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-lrdnfdozybuqwfvwazhsfctwigovsthj ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780880036.6404529-8539-174570802496304/AnsiballZ_dnf.py'
+Jun  8 06:23:56 servera sudo[4639]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:24:06 servera useradd[4648]: failed adding user 'mysql', exit code: 9
+Jun  8 06:24:12 servera sudo[4639]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:24:13 servera sudo[4968]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-bvlbynfoscyhknxbuyvjdkbxtipkapir ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780880052.5706565-8797-38736980492082/AnsiballZ_systemd.py'
+Jun  8 06:24:13 servera sudo[4968]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:24:15 servera sudo[4968]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:24:41 servera sudo[5410]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-geodhqtndkixyqupaauleyeapjbuheaz ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780880080.1970627-9834-86612212491135/AnsiballZ_setup.py'
+Jun  8 06:24:41 servera sudo[5410]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:24:42 servera sudo[5410]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:24:44 servera sudo[5604]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-qelonnofpaulgrvfpdnskybeuxqjvtcx ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780880083.0358672-10069-69282325010110/AnsiballZ_dnf.py'
+Jun  8 06:24:44 servera sudo[5604]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:24:58 servera sudo[5604]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:25:00 servera sudo[5908]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-hyzegwznknbscupctnweriqeqqybspil ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780880099.3586483-10333-168391513263458/AnsiballZ_systemd.py'
+Jun  8 06:25:01 servera sudo[5908]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:25:01 servera sudo[5908]: pam_unix(sudo:session): session closed for user root
+Jun  8 06:26:02 servera sshd-session[4120]: Received disconnect from 192.168.61.155 port 37338:11: disconnected by user
+Jun  8 06:26:02 servera sshd-session[4120]: Disconnected from user student 192.168.61.155 port 37338
+Jun  8 06:26:02 servera sshd-session[4098]: pam_unix(sshd:session): session closed for user student
+Jun  8 06:33:41 servera sshd-session[5981]: Accepted publickey for student from 192.168.61.155 port 43792 ssh2: ED25519 SHA256:uvhhLGvTXP3CQV7QmnqeRcjmTrGVHt3/6VrK9d6ujro
+Jun  8 06:33:42 servera (systemd)[5986]: pam_unix(systemd-user:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  8 06:33:42 servera sshd-session[5981]: pam_unix(sshd:session): session opened for user student(uid=1000) by student(uid=0)
+Jun  8 06:33:43 servera sudo[6177]: student : TTY=pts/0 ; PWD=/home/student ; USER=root ; COMMAND=/bin/sh -c 'echo BECOME-SUCCESS-vyxchxkyyhjbwsaeukchjltqjryupnwi ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1780880622.4721677-14314-136247034586131/AnsiballZ_setup.py'
+Jun  8 06:33:43 servera sudo[6177]: pam_unix(sudo:session): session opened for user root(uid=0) by student(uid=1000)
+Jun  8 06:33:44 servera sudo[6177]: pam_unix(sudo:session): session closed for user root

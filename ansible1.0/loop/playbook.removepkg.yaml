@@ -1,0 +1,15 @@
+---
+- name: Uninstall packages
+  hosts: webserver
+  vars:
+    mariadb_packages:
+      - mariadb-server
+      - python3-PyMySQL
+      - httpd
+  tasks:
+    - name: MariaDB packages are Uninstall
+      ansible.builtin.dnf:
+        name: "{{ item }}"    
+        state: absent
+      loop: "{{ mariadb_packages }}"
+

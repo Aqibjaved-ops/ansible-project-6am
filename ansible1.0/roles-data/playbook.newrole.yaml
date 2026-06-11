@@ -1,0 +1,5 @@
+---
+- name: Add new role
+  hosts: serverb
+  roles:
+    - apache

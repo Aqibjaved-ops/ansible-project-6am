@@ -1,0 +1,7 @@
+---
+- name: Facts dump
+  hosts: servera
+  tasks: 
+    - name: Print all Facts
+      ansible.builtin.debug:
+        var: ansible_facts

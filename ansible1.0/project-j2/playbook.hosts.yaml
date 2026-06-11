@@ -1,0 +1,9 @@
+---
+- name: Configure hosts
+  hosts: all
+  tasks:
+    - name: Configurehost
+      ansible.builtin.template:
+        src: hosts.j2
+        dest: /etc/hosts
+      when: inventory_hostname in groups['dev']

@@ -1,0 +1,16 @@
+servera
+serverb
+
+[dev]
+servera
+
+[ops]
+serverb
+
+[devops:children]
+dev
+ops
+
+[webserver]
+servera
+serverb
